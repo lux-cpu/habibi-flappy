@@ -1,0 +1,67 @@
+/* Keyframe animations */
+@keyframes futuristicGlow {
+  0% { opacity: 0.3; }
+  100% { opacity: 0.7; }
+}
+
+@keyframes cyberPulse {
+  0%, 100% { 
+    transform: scale(1);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+  }
+  50% { 
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.8);
+  }
+}
+
+@keyframes highScoreEntry {
+  0% {
+    opacity: 0;
+    transform: scale(0.5) rotate(-10deg);
+  }
+  50% {
+    transform: scale(1.1) rotate(5deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+@keyframes highScoreGlow {
+  0% {
+    box-shadow: 
+      0 0 20px rgba(0, 255, 255, 0.5), 
+      0 0 40px rgba(255, 215, 0, 0.3);
+  }
+  100% {
+    box-shadow: 
+      0 0 30px rgba(0, 255, 255, 0.8), 
+      0 0 60px rgba(255, 215, 0, 0.6);
+  }
+}
+
+/* Animation classes */
+.futuristic-glow {
+  animation: futuristicGlow 4s ease-in-out infinite alternate;
+}
+
+.cyber-pulse {
+  animation: cyberPulse 2s infinite;
+}
+
+.high-score-entry {
+  animation: 
+    highScoreEntry 0.5s ease-out,
+    highScoreGlow 2s ease-in-out infinite alternate;
+}
+
+.bird-flap {
+  animation: birdFlap 0.3s ease-in-out infinite alternate;
+}
+
+@keyframes birdFlap {
+  0% { transform: translateY(0) rotate(0deg); }
+  100% { transform: translateY(-5px) rotate(-5deg); }
+}
