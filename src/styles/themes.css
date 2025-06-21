@@ -1,0 +1,58 @@
+:root {
+  --color-bg-top: #1a0033;
+  --color-bg-mid: #000066;
+  --color-bg-bottom: #330066;
+  --color-primary: #00ffff;
+  --color-secondary: #0080ff;
+  --color-accent: #ff00ff;
+  --color-text: #ffffff;
+  --color-danger: #ff0000;
+  --color-success: #00ff00;
+  --color-score: #fbbf24;
+  
+  --border-radius: 12px;
+  --border-width: 2px;
+  --transition-time: 0.3s;
+}
+
+.dark {
+  --color-bg-top: #000022;
+  --color-bg-mid: #000044;
+  --color-bg-bottom: #220044;
+  --color-primary: #00cccc;
+  --color-text: #e0e0e0;
+}
+
+/* Theme utility classes */
+.text-cyber {
+  color: var(--color-primary);
+  text-shadow: 0 0 5px var(--color-primary);
+}
+
+.bg-cyber {
+  background: linear-gradient(45deg, var(--color-primary), var(--color-secondary));
+}
+
+.border-cyber {
+  border: var(--border-width) solid var(--color-primary);
+  box-shadow: 0 0 10px var(--color-primary);
+}
+
+.hover-cyber:hover {
+  filter: brightness(1.2);
+  transform: translateY(-1px);
+  transition: all var(--transition-time) ease;
+}
+
+/* Component-specific themes */
+.button-cyber {
+  background: var(--color-primary);
+  color: black;
+  border-radius: var(--border-radius);
+  transition: all var(--transition-time) ease;
+}
+
+.button-cyber:hover {
+  background: var(--color-secondary);
+  box-shadow: 0 0 15px var(--color-primary);
+}
